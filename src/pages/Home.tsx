@@ -1,11 +1,12 @@
-import LayoutComponent from "../componets/LayoutComponent"
+import CardComponent from "../components/CardComponent"
+import LayoutComponent from "../components/LayoutComponent"
 
 const Home: React.FC = () =>{
   return (
     <LayoutComponent>
-      <div className="p-4 ">
-        <h1>Home</h1>
-      </div>
+        <CardComponent title="Olá">
+            <p>Seja bem vindo ao sistema de gerenciamento de propriedades!</p>
+        </CardComponent>
     </LayoutComponent>
   )
 }

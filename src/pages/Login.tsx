@@ -2,9 +2,9 @@ import { z } from 'zod';
 import image from '../assets/FarmHouse.svg'
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useAuthStore } from '../stores/authStore.ts';
-import ButtonComponent from '../componets/ButtonComponent.tsx';
-import InputComponent from '../componets/InputComponents.tsx';
+import { useAuthStore } from '../stores/useAuthStore.ts';
+import ButtonComponent from '../components/ButtonComponent.tsx';
+import InputComponent from '../components/InputComponents.tsx';
 import { useNavigate } from 'react-router-dom';
 
 

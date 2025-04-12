@@ -3,7 +3,7 @@ import { useState } from "react"
 interface InputProps{
     placeholder: string
     onchangeText: (text: string) => void
-    label: string,
+    label?: string| null,
     value?: string
     error?: string | null
 }
@@ -13,8 +13,8 @@ const InputComponent: React.FC<InputProps> = ({placeholder,label, onchangeText, 
 
     return(
         <div className="flex w-full mb-4 flex-col">
-            <label htmlFor={label} className={` ${focus ? 'text-green-500' : ''}`}>{label}</label>
-            <input id={label} value={value} 
+            { label && <label htmlFor={label} className={` ${focus ? 'text-green-500' : ''}`}>{label}</label> }
+            <input id={label || ''} value={value} 
                 placeholder={placeholder} 
                 onChange={e => onchangeText(e.target.value)} 
                 onFocus={() => setFocus(true)} onBlur={() => setFocus(false)} 
