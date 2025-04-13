@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react/dist/iconify.js"
 import React from "react"
 
 interface TableProps {
@@ -20,7 +21,7 @@ const TableComponent: React.FC<TableProps> = ({columns, children}:TableProps) =>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                     {children}
-                </tbody>
+                </tbody>                
             </table>
         </div>
     )

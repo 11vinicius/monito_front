@@ -24,8 +24,6 @@ export const useOwnershipStore = create<OwnershipStore>((set)=>({
             const { data, status } = await service.findAll();
             set({
                 ownership: data.data,
-                lastPage: data.last_page,
-                prevPage: data.prev_page_url ? data.current_page - 1 : null,
                 loading: false,
                 erro: null
             })

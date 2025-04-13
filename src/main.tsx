@@ -8,14 +8,19 @@ import {
   RouterProvider,
 } from "react-router";
 import PrivateRoute from './middleware/authmiddleware.tsx'
-import Ownership from './pages/Ownership/index.tsx'
+import Ownership from './pages/Ownership/Index.tsx'
+import OwnershipCreate from './pages/Ownership/Create.tsx'
+
 
 const router = createBrowserRouter([
   { path: "/login", element: <Login />},
   {
     element: <PrivateRoute />, // ← middleware
     children: [
-      {path: "/propriedades", element: <Ownership />, children: []},
+      //rotas de propriedade
+        {path: "/propriedades", element: <Ownership />},
+        {path: "/propriedades/criar", element: <OwnershipCreate />},
+      ///
       {path: "/", element: <Home />},
     ],
   },
